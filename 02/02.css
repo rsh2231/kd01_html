@@ -1,2 +1,92 @@
-.c1 {background-color: green;
-color: white;}
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    padding: 20px;
+    }
+
+main {
+    width: 80%;;
+}
+
+main > section > p { 
+    color: yellow;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+a:hover {
+    background-color: blue;
+    color: white;
+    padding: 5px;
+}
+
+a:active {
+    background-color: red;
+    color: white;
+}
+
+article {
+    border-left-width: 5px;
+    border-style: solid;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+}
+
+section {background-color: blue;
+font-weight: bold;
+padding-left: 20px;
+font-family: "Noto Sans KR", serif;
+font-optical-sizing: auto;
+font-weight: bold;
+font-style: normal;
+}
+
+#reactid {background-color: blueviolet;
+}
+
+ul {
+    background-color: aquamarine;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    background-color: beige;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+li:hover {
+    background-color: blue;
+    color: white;
+}
+
+@media screen and (max-width : 768px) {
+    ul {
+        display: flex;
+        flex-direction: column;
+        height: 300px
+    }  
+    li {
+        width: 80%;
+        margin: 2px
+    }
+}
