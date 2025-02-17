@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 웹아이콘 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- 외부스타일 -->
+  <link rel="stylesheet" type="text/css" href="../index.css">
+  <link rel="stylesheet" type="text/css" href="../js.css">
+  <link rel="stylesheet" type="text/css" href="./10.css">
+  <title>KD01 JS</title>
+
+  <!-- 외부 자바스크립트 -->
+  <script src="./10.js"></script>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>자바스크립트 단위환산</h1>
+      <a href="../index.html"><i class="fa-solid fa-house"></i></a>
+    </header>
+    <section>
+      <div class="unit">
+        <div class="unitDiv">
+          <select id="sel1"> 
+            <option value="℃" selected>섭씨온도(℃)</option>
+            <option value="℉" >화씨온도(℉)</option>
+          </select> 
+          <select id="sel2">
+            <option value="℃">섭씨온도(℃)</option>
+            <option value="℉" selected>화씨온도(℉)</option>
+          </select>
+        </div>
+        <div class="unitDiv">
+          <div>
+            <input type="nubmer" id="txt1" name="'txt1">
+            <span id="sp1">℃</span>
+          </div>
+          <div>
+            <input type="number" id="txt2" name="'txt2" readonly>
+            <span id="sp2">℉</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+
+</html>

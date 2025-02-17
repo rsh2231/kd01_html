@@ -1,0 +1,18 @@
+#title {
+    display: flex;
+    width : 90%;
+    height: 80px;
+    margin: 10px;
+    padding: 20px;
+    background-color: aliceblue;
+    justify-content: center;
+
+}
+
+input {
+    display: inline-flex;
+    width: 60%;
+    height: 40px;
+    margin: 10px;
+    border-radius: 4px;
+}

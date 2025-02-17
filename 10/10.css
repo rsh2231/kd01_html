@@ -1,0 +1,30 @@
+.unit {
+    width : 600px ;
+    background-color: aliceblue;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .unitDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px; 
+  }
+  
+  select, .unitDiv > div {
+    display: inline-flex;
+    width: 50%;
+    height: 40px;
+    margin: 10px;
+    text-align: center;
+  }
+
+
+  input[readonly] {
+    background-color: beige;
+  }
