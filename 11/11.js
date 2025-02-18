@@ -1,33 +1,45 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // DOM 요소 가져오기
-  const input = document.querySelector("#myInput");
-  const bt = document.querySelector("#checkBtn");
-  const img = document.querySelector("#img");
+//DOM 생성이 난 후
+document.addEventListener('DOMContentLoaded', ()=>{
+  //제어할 요소 가져오기
+  const img = document.querySelector('img') ;
+  const txt1 = document.querySelector('#txt1') ;
+  const bt = document.querySelector('button') ;
 
-  // 랜덤수 생성
-  const selectNumber = Math.floor(Math.random() * 100) + 1;
+  //랜덤 게임수
+  let n ;
+  //랜덤수가 생성되었는지 확인
+  let isFlag = false ;
 
-  // 확인 버튼 클릭 이벤트 처리
-  bt.addEventListener("click", () => {
-    // 입력 값 가져오기
-    const userGuess = parseInt(input.value);
+  //확인 버튼이 눌러졌을때 
+  bt.addEventListener('click' , (e)=>{
+    e.preventDefault();
 
-    // 입력 유효성 검사
-    if (isNaN(userGuess) || userGuess < 1 || userGuess > 100) {       //isNaN -> is not a nuber
-      alert("1부터 100 사이의 숫자를 입력하세요.");
-      input.value = "";
-      input.focus();
-      return;
+    //랜덤수를 생성할 지 결정
+    if ( !isFlag ) {
+      n = Math.floor(Math.random() * 101); //1~100까지
+      isFlag = true ;
+      img.setAttribute('src', '../img/what.png') ;
+      txt1.value = '' ;
+      txt1.style.display = 'inline' ;
+      txt1.focus();
+      bt.innerHTML = '확인' ;
+      return ;
     }
+    console.log('n = ', n, 'isFlag = ', isFlag) ;
 
-    // 숫자 비교 및 결과 확인
-    if (userGuess < selectNumber) {
-      img.innerHTML = `<img src="../img/up.png" alt="낮음">`;
-    } else if (userGuess > selectNumber) {
-      img.innerHTML = `<img src="../img/down.png" alt="높음">`;
-    } else {
-      img.innerHTML = `<img src="../img/good.png" alt="정답">`;
+    //숫자비교
+    if (parseInt(txt1.value) > n) {       //입력한 숫자가 n보다 큰경우 : down
+      img.setAttribute('src', '../img/down.png') ;
     }
-    input.value = "";
-  });
-});
+    else if (parseInt(txt1.value) < n) {  //입력한 숫자가 n보다 작은경우 : up
+      img.setAttribute('src', '../img/up.png') ;
+    }
+    else if (parseInt(txt1.value) == n) {  //숫자를 맞춘 경우 
+      txt1.style.display = 'none'  ;
+      bt.innerHTML = '다시 하기' ;
+      isFlag = false ;              
+      img.setAttribute('src', '../img/good.png') ;
+    } 
+  }) ;
+  
+}) ;

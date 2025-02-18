@@ -1,18 +1,26 @@
-#title {
+.sec, .row {
     display: flex;
-    width : 90%;
-    height: 80px;
-    margin: 10px;
-    padding: 20px;
-    background-color: aliceblue;
     justify-content: center;
-
-}
-
-input {
-    display: inline-flex;
-    width: 60%;
+    align-items: center;
+  }
+  
+  .sec {
+    margin: 2px; 
+    width: 100%;
+    flex-direction: column;
+  }
+  .row {
+    width: 80%;
+    
+    flex-direction: row;
+  }
+  
+  #txt1 {
     height: 40px;
-    margin: 10px;
-    border-radius: 4px;
-}
+    margin-right: 10px;
+  }
+   
+  
+  input {
+    width: 200px;
+  }
