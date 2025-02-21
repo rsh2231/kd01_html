@@ -1,12 +1,38 @@
-document.addEventListener("DOMContentLoaded", () => {
-  let arr = [0, 0, 0, 0, 0, 0, 0, 0, 1]; // 8개는 빈칸, 1개는 폭탄
-  let isFlag = false; // 게임 시작 여부
-  console.log(arr);
+// 전역 변수
+// 8개는 빈칸, 1개는 폭탄
+let arr = [0, 0, 0, 0, 0, 0, 0, 0, 1];
+// 게임 시작 여부
+let isFlag = false;
 
-  //요소 가져오기
+document.addEventListener("DOMContentLoaded", () => {
+  // 제어 요소 가져오기
   const cols = document.querySelectorAll(".col");
   const bt = document.querySelector("button");
   const msg = document.querySelector("#msg");
+
+  // 보드에 숫자 쓰기
+  for (let [idx, col] of cols.entries()) {
+    col.innerHTML = idx + 1;
+  }
+
+  //버튼 클릭(게임 시작 또는 재시작)
+  bt.addEventListener("click", () => {
+    console.log("bt");
+    if (!isFlag) {
+      // 배열 내용 섞기
+      arr.sort(() => Math.random() - 0.5);
+      msg.innerHTML = "";
+      bt.innerHTML = "게임중...";
+      isFlag = true;
+      console.log(isFlag, arr);
+
+      //보드 초기화
+      for (let col of cols) {
+        col.classList.remove("clicked");
+        col.innerHTML = "";
+      }
+    }
+  });
 
   // 보드에 클릭 이벤트 발생
   for (let [idx, col] of cols.entries()) {
@@ -43,28 +69,5 @@ document.addEventListener("DOMContentLoaded", () => {
         isFlag = false; // 게임 종료
       }
     });
-  }
-
-  //버튼 클릭(게임 시작 또는 재시작)
-  bt.addEventListener("click", () => {
-    console.log("bt");
-    if (!isFlag) {
-      arr.sort(() => Math.random() - 0.5);
-      msg.innerHTML = "";
-      bt.innerHTML = "게임중...";
-      isFlag = true;
-      console.log(isFlag, arr);
-
-      //보드 초기화
-      for (let col of cols) {
-        col.classList.remove("clicked");
-        col.innerHTML = "";
-      }
-    }
-  });
-
-  // 보드에 숫자 쓰기
-  for (let [idx, col] of cols.entries()) {
-    col.innerHTML = idx + 1;
   }
 });

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 웹아이콘 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- 외부스타일 -->
+    <link rel="stylesheet" type="text/css" href="../index.css" />
+    <link rel="stylesheet" type="text/css" href="../js.css" />
+    <link rel="stylesheet" type="text/css" href="./13.css" />
+    <title>KD01 JS</title>
+
+    <!-- 외부 자바스크립트 -->
+    <script src="./13.js"></script>
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h1><i class="fa-solid fa-film"> 일일박스오피스</i></h1>
+        <a href="../index.html"><i class="fa-solid fa-house"></i></a>
+      </header>
+      <form>
+        <input type="date" id="dt" name="dt" />
+        <fieldset>
+          <!-- <legend>영화별 조회</legend> -->
+          <label><input type="radio" name="mvtype" id="myType1" value="K">한국영화</input></label>
+          <input type="radio" name="mvtype" id="myType2" value="F"><label for="myType2">외국영화</label></input>
+          <input type="radio" name="mvtype" id="myType3" value="D" checked><label for="myType3">전체</label></input>         
+        </fieldset>
+<button>조회</button>   
+      </form>
+      <section id="mv">
+        <div id="poseter"></div>
+        <div>
+          <ul></ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
