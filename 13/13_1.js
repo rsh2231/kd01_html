@@ -1,7 +1,7 @@
 /* .then
 // fetch를 가져오는 함수 생성
 const getFetch = () => {
-  let apiKey = "73888b575b2d7ad6065f805163c17961";
+  let apiKey = 
   let baseUrl =
     "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?";
   let url = `${baseUrl}key=${apiKey}&targetDt=20250219`;
@@ -20,7 +20,7 @@ const getFetch = () => {
 
 // asysnc await
 const getFetch = async () => {
-  let apiKey = "73888b575b2d7ad6065f805163c17961";
+  let apiKey = 
   let baseUrl =
     "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?";
   let url = `${baseUrl}key=${apiKey}&targetDt=20250219`;

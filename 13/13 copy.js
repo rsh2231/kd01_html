@@ -1,6 +1,6 @@
 // fetch 함수 생성
 const getFetch = async (dt, ul) => {
-  let apiKey = "73888b575b2d7ad6065f805163c17961";
+  let apiKey = "";
   let baseUrl =
     "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?";
   let url = `${baseUrl}key=${apiKey}&targetDt=${dt}`;
