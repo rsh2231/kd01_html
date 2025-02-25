@@ -20,7 +20,7 @@ const getFetch = () => {
 
 // asysnc await
 const getFetch = async () => {
-  let apiKey = 
+  let apiKey = ""
   let baseUrl =
     "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?";
   let url = `${baseUrl}key=${apiKey}&targetDt=20250219`;
